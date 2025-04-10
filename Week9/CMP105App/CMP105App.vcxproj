@@ -165,6 +165,8 @@
     <ClCompile Include="Framework\VectorHelper.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="BallManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="DO_NOT_EDIT.txt" />
@@ -177,6 +179,8 @@
     <ClInclude Include="Framework\Input.h" />
     <ClInclude Include="Framework\GameObject.h" />
     <ClInclude Include="Framework\VectorHelper.h" />
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="BallManager.h" />
     <ClInclude Include="Level.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
