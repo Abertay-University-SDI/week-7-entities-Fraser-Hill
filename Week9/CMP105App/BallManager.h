@@ -16,5 +16,8 @@ private:
 	std::vector<Ball> balls;
 	sf::Vector2f spawnPoint;
 	sf::Texture texture;
+	float timeSinceCountPrinted = 0.f;
+
+	const float Time_Between_Printing = 3.0f;
 
 };

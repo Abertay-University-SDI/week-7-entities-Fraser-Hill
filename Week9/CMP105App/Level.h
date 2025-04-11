@@ -7,6 +7,8 @@
 #include <iostream>
 #include "Ball.h"
 #include "BallManager.h"
+#include "Goomba.h"
+#include "GoombaManager.h"
 
 class Level : public BaseLevel{
 public:
@@ -21,5 +23,7 @@ private:
 	// Default variables for level class.
 	Ball Ball;
 	BallManager* ballManager;
+	Goomba goomba;
+	GoombaManager* goombaManager;
 
 };
