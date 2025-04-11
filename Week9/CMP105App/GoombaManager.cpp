@@ -5,7 +5,7 @@ GoombaManager::GoombaManager(sf::Vector2u windowSize) {
 
 	sizeOfWindow = windowSize;
 	spawnY =  - 100.f;
-	texture.loadFromFile("gfx/BGoomba.png");
+	texture.loadFromFile("gfx/Goomba.png");
 
 	for (int i = 0; i < GOOMBA_COUNT; i++) {
 		Goombas.push_back(Goomba());

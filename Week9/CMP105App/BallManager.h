@@ -6,7 +6,7 @@ public:
 	BallManager();
 	~BallManager();
 
-	void spawn();
+	void spawn(sf::Vector2f spawnPosition);
 	void update(float dt);
 	void deathCheck();
 	void render(sf::RenderWindow* window);

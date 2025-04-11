@@ -169,6 +169,7 @@
     <ClCompile Include="BallManager.cpp" />
     <ClCompile Include="Goomba.cpp" />
     <ClCompile Include="GoombaManager.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="DO_NOT_EDIT.txt" />
@@ -186,6 +187,7 @@
     <ClInclude Include="Goomba.h" />
     <ClInclude Include="GoombaManager.h" />
     <ClInclude Include="Level.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

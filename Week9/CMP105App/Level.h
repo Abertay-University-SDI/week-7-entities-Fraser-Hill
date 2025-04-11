@@ -9,6 +9,7 @@
 #include "BallManager.h"
 #include "Goomba.h"
 #include "GoombaManager.h"
+#include "Player.h"
 
 class Level : public BaseLevel{
 public:
@@ -25,5 +26,7 @@ private:
 	BallManager* ballManager;
 	Goomba goomba;
 	GoombaManager* goombaManager;
+
+	Player* player;
 
 };

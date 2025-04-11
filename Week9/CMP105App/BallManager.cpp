@@ -9,7 +9,7 @@ BallManager::BallManager() {
 		balls.push_back(Ball());
 		balls[i].setAlive(false);
 		balls[i].setTexture(&texture);
-		balls[i].setSize(sf::Vector2f(100, 100));
+		balls[i].setSize(sf::Vector2f(10, 10));
 	}
 }
 
@@ -33,20 +33,15 @@ void BallManager::update(float dt) {
 	deathCheck();
 }
 
-void BallManager::spawn() {
+void BallManager::spawn(sf::Vector2f spawnPosition) {
 	for (int i = 0; i < balls.size(); i++) {
 		if (!balls[i].isAlive()) {
 			balls[i].setAlive(true);
-			balls[i].setVelocity(rand() % 200 - 100, rand() % 200 - 100);
-			balls[i].setPosition(spawnPoint);
+			balls[i].setVelocity(100, 0);
+			balls[i].setPosition(spawnPosition);
 			return;
 		}
 	}
-	balls.push_back(Ball());
-	balls[balls.size() - 1].setAlive(true);
-	balls[balls.size() - 1].setTexture(&texture);
-	balls[balls.size() - 1].setVelocity(rand() % 200 - 100, rand() % 200 - 100);
-	balls[balls.size() - 1].setPosition(spawnPoint);
 }
 
 void BallManager::deathCheck() {

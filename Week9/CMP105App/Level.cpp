@@ -8,6 +8,8 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	// initialise game objects
 	ballManager = new BallManager();
 	goombaManager = new GoombaManager(window->getSize());
+	player = new Player();
+	player->setInput(input);
 }
 
 Level::~Level()
@@ -18,14 +20,16 @@ Level::~Level()
 // handle user input
 void Level::handleInput(float dt)
 {
-	if (input->isKeyDown(sf::Keyboard::Space)) {
-		ballManager->spawn();
-		input->setKeyUp(sf::Keyboard::Space);
-	}
-	if (input->isKeyDown(sf::Keyboard::W)) {
-		goombaManager->spawn();
-		input->setKeyUp(sf::Keyboard::W);
-	}
+	//if (input->isKeyDown(sf::Keyboard::Space)) {
+		//ballManager->spawn(sf::Vector2f spawnPosition);
+		//input->setKeyUp(sf::Keyboard::Space);
+	//}
+	//if (input->isKeyDown(sf::Keyboard::W)) {
+	//	goombaManager->spawn();
+	//	input->setKeyUp(sf::Keyboard::W);
+	//}
+
+	player->handleInput(dt);
 }
 
 // Update game objects
@@ -36,6 +40,8 @@ void Level::update(float dt)
 
 	goombaManager->update(dt);
 	goombaManager->deathCheck();
+
+	player->update(dt);
 	
 }
 
@@ -46,5 +52,8 @@ void Level::render()
 	ballManager->render(window);
 
 	goombaManager->render(window);
+
+	window->draw(*player);
+	player->render(window);
 	endDraw();
 }
